@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nancy's Food Diary</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= LOGIN PAGE ================= -->
+
+<div class="login-page" id="loginPage">
+
+    <div class="food-login">
+
+        <div class="food-login-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                alt="Delicious food">
+
+        </div>
+
+
+        <div class="login-box">
+
+            <div class="food-icon">
+                🍴
+            </div>
+
+            <h1>
+                Nancy's <span>Food Diary</span>
+            </h1>
+
+            <p>
+                Welcome back, food lover! ❤️
+            </p>
+
+            <h2>
+                Login
+            </h2>
+
+
+            <input
+                type="text"
+                id="username"
+                placeholder="👤 Username"
+            >
+
+
+            <input
+                type="password"
+                id="password"
+                placeholder="🔒 Password"
+            >
+
+
+            <button onclick="login()">
+                Login
+            </button>
+
+
+            <p id="loginMessage"></p>
+
+
+            <div class="demo-login">
+
+                <p>
+                    Demo Login
+                </p>
+
+                <b>Username: Nancy</b>
+                <br>
+
+                <b>Password: Nancy@123</b>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MAIN WEBSITE ================= -->
+
+<div id="mainWebsite">
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        Nancy's <span>Food Diary</span>
+    </div>
+
+
+    <nav id="navbar">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About Me
+        </a>
+
+        <a href="#blogs">
+            Food Blogs
+        </a>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <button
+        class="menu-btn"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+
+    <button
+        class="dark-btn"
+        onclick="toggleDarkMode()">
+        🌙
+    </button>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <p class="small-title">
+            WELCOME TO MY FOOD WORLD
+        </p>
+
+
+        <h1>
+            Good Food.
+            <br>
+            <span>Good Mood.</span>
+        </h1>
+
+
+        <p>
+            Exploring delicious food, sharing recipes
+            and discovering beautiful food stories.
+        </p>
+
+
+        <a
+            href="#blogs"
+            class="main-btn">
+            Explore My Blogs
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
+            alt="Healthy food">
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="profile">
+
+        <img
+            src="profile.jpg"
+            alt="Nancy's profile picture">
+
+    </div>
+
+
+    <div class="about-text">
+
+        <p class="small-title">
+            ABOUT ME
+        </p>
+
+
+        <h2>
+            Hi, I'm <span>Nancy</span> 👋
+        </h2>
+
+
+        <p>
+            Welcome to my food diary! I love discovering
+            delicious dishes, exploring different cuisines
+            and sharing my food experiences.
+        </p>
+
+
+        <p>
+            Through this blog, I share recipes, food stories,
+            restaurant experiences and my favourite dishes.
+        </p>
+
+
+        <a
+            href="#blogs"
+            class="main-btn">
+            Read My Stories
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section
+    class="categories"
+    id="categories">
+
+    <p class="small-title">
+        EXPLORE
+    </p>
+
+
+    <h2>
+        Food Categories
+    </h2>
+
+
+    <div class="category-container">
+
+
+        <div
+            class="category-card"
+            onclick="selectCategory('Indian Food')">
+
+            <div>
+                🍛
+            </div>
+
+            <h3>
+                Indian Food
+            </h3>
+
+            <p>
+                Traditional and delicious Indian dishes.
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            onclick="selectCategory('Desserts')">
+
+            <div>
+                🍰
+            </div>
+
+            <h3>
+                Desserts
+            </h3>
+
+            <p>
+                Sweet treats for every occasion.
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            onclick="selectCategory('Street Food')">
+
+            <div>
+                🌮
+            </div>
+
+            <h3>
+                Street Food
+            </h3>
+
+            <p>
+                Explore exciting street food flavours.
+            </p>
+
+        </div>
+
+
+        <div
+            class="category-card"
+            onclick="selectCategory('Healthy Food')">
+
+            <div>
+                🥗
+            </div>
+
+            <h3>
+                Healthy Food
+            </h3>
+
+            <p>
+                Simple and healthy food ideas.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOD BLOGS ================= -->
+
+<section
+    class="blogs"
+    id="blogs">
+
+
+    <p class="small-title">
+        MY LATEST STORIES
+    </p>
+
+
+    <h2>
+        Food Blog
+    </h2>
+
+
+    <div class="filters">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search food blogs..."
+            onkeyup="searchBlogs()"
+        >
+
+
+        <select
+            id="categoryFilter"
+            onchange="filterBlogs()">
+
+            <option value="all">
+                All Categories
+            </option>
+
+            <option value="Indian Food">
+                Indian Food
+            </option>
+
+            <option value="Desserts">
+                Desserts
+            </option>
+
+            <option value="Street Food">
+                Street Food
+            </option>
+
+            <option value="Healthy Food">
+                Healthy Food
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div
+        class="blog-container"
+        id="blogContainer">
+
+
+        <!-- BLOG 1 -->
+
+        <article
+            class="blog-card"
+            data-category="Indian Food">
+
+            <img
+                src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80"
+                alt="Indian food">
+
+
+            <div class="blog-content">
+
+                <span>
+                    Indian Food
+                </span>
+
+
+                <h3>
+                    My Love for Indian Food
+                </h3>
+
+
+                <p>
+                    Indian cuisine is full of colours,
+                    spices and amazing flavours.
+                </p>
+
+
+                <button
+                    onclick="readBlog(
+                    'My Love for Indian Food',
+                    'Indian cuisine is full of colours, spices and amazing flavours. Biryani, dosa, paneer and many traditional dishes are some of my favourites.'
+                    )">
+
+                    Read More →
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- BLOG 2 -->
+
+        <article
+            class="blog-card"
+            data-category="Desserts">
+
+            <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                alt="Chocolate cake">
+
+
+            <div class="blog-content">
+
+                <span>
+                    Desserts
+                </span>
+
+
+                <h3>
+                    The Perfect Chocolate Cake
+                </h3>
+
+
+                <p>
+                    A delicious chocolate cake is always
+                    a good idea.
+                </p>
+
+
+                <button
+                    onclick="readBlog(
+                    'The Perfect Chocolate Cake',
+                    'Chocolate cake is one of my favourite desserts. Soft, rich and chocolatey, it is perfect for birthdays and celebrations.'
+                    )">
+
+                    Read More →
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- BLOG 3 -->
+
+        <article
+            class="blog-card"
+            data-category="Street Food">
+
+            <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                alt="Street food">
+
+
+            <div class="blog-content">
+
+                <span>
+                    Street Food
+                </span>
+
+
+                <h3>
+                    Exploring Indian Street Food
+                </h3>
+
+
+                <p>
+                    From spicy snacks to delicious chaats,
+                    Indian street food has something for everyone.
+                </p>
+
+
+                <button
+                    onclick="readBlog(
+                    'Exploring Indian Street Food',
+                    'Indian street food offers a huge variety of flavours. Pani puri, samosa, pav bhaji and many other snacks are loved by food lovers.'
+                    )">
+
+                    Read More →
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- BLOG 4 -->
+
+        <article
+            class="blog-card"
+            data-category="Healthy Food">
+
+            <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                alt="Healthy salad">
+
+
+            <div class="blog-content">
+
+                <span>
+                    Healthy Food
+                </span>
+
+
+                <h3>
+                    Simple Healthy Meals
+                </h3>
+
+
+                <p>
+                    Healthy food can also be delicious.
+                    Here are some simple ideas.
+                </p>
+
+
+                <button
+                    onclick="readBlog(
+                    'Simple Healthy Meals',
+                    'Healthy meals can be colourful, tasty and easy to prepare. Fresh vegetables, fruits, grains and balanced meals can make everyday eating better.'
+                    )">
+
+                    Read More →
+
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CREATE BLOG ================= -->
+
+<section class="create-blog">
+
+    <p class="small-title">
+        SHARE YOUR STORY
+    </p>
+
+
+    <h2>
+        Create a Food Blog
+    </h2>
+
+
+    <form onsubmit="addBlog(event)">
+
+        <input
+            type="text"
+            id="blogTitle"
+            placeholder="Blog title"
+            required
+        >
+
+
+        <select
+            id="blogCategory"
+            required>
+
+            <option value="">
+                Select category
+            </option>
+
+            <option value="Indian Food">
+                Indian Food
+            </option>
+
+            <option value="Desserts">
+                Desserts
+            </option>
+
+            <option value="Street Food">
+                Street Food
+            </option>
+
+            <option value="Healthy Food">
+                Healthy Food
+            </option>
+
+        </select>
+
+
+        <textarea
+            id="blogContent"
+            placeholder="Write your food story..."
+            required></textarea>
+
+
+        <button
+            type="submit"
+            class="main-btn">
+
+            Publish Blog
+
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+    class="contact"
+    id="contact">
+
+    <p class="small-title">
+        GET IN TOUCH
+    </p>
+
+
+    <h2>
+        Contact Me
+    </h2>
+
+
+    <p>
+        Have a food recommendation or want to
+        share a food story?
+    </p>
+
+
+    <a
+        href="mailto:yourmail@example.com"
+        class="main-btn">
+
+        Email Me
+
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        Nancy's Food Diary
+    </h3>
+
+
+    <p>
+        Exploring food, one delicious story at a time.
+    </p>
+
+
+    <p>
+        © 2026 Nancy's Food Diary. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= READ BLOG POPUP ================= -->
+
+<div
+    class="modal"
+    id="blogModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeBlog()">
+
+            ×
+
+        </button>
+
+
+        <h2 id="modalTitle"></h2>
+
+
+        <p id="modalContent"></p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
